@@ -14,13 +14,27 @@
   }
 } //end mq
 
-@mixin header {
+@mixin responsive-img($size, $height, $item) {
+	@if $item == "header" {
+		@if $size == 320 {
+			@include background-img($size, $height);
+		}
+		@elseif $size == 1300 {
+			@include background-img($size, $height);
+		}
+		@else {
+			@include background-img($size, $height);
+		}
+	}
+}
+
+@mixin background-img ($size, $height) {
 	header {
 		background: {
 			color: white;
-			image: url("../images/armsOut_1300px.jpg");
+			image: url("../images/armsOut_"+$size+"px.jpg");
 		}
-		height: pxtoem(400px);
+		height: pxtoem($height);
 	}
 }
 

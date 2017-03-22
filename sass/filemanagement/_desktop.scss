@@ -1,6 +1,6 @@
 // media queries for site: desktop, site is mobile first
 @include mq($large) {
-	@include header;
+	@include responsive-img(1300, 400, "header")
 	.wrapper {
 		width: 95%;
 		/*limit width on upper end of screen sizes, because overly long lines of text are fatiguing to read

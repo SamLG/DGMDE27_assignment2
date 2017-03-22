@@ -27,11 +27,7 @@ body {
 	width: 0;
 }
 header {
-	background: {
-		color: white;
-		image: url("../images/armsOut_400px.jpg");
-	}
-	height: pxtoem(320px);
+	@include responsive-img(320, 320, "header")
 	position: relative;
 }
 h2,h3,h4,h5,h6 {
