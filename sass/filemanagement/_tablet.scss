@@ -1,0 +1,13 @@
+// media queries for site: desktop, site is mobile first
+@include mq($medium) {
+	@include header;
+	.col-1,
+	.col-2, .col-3 {
+		width: 33.33%; 
+	}
+	.col-4,
+	.col-5,
+	.col-6 {
+		width: 100%;
+	}
+}

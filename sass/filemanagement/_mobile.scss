@@ -1,0 +1,544 @@
+/* 
+  declare border-box sizing
+  http://www.paulirish.com/2012/box-sizing-border-box-ftw/ 
+*/
+html {
+	box-sizing: border-box;
+	overflow-x: hidden; //addresses padding overflow from grid system
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	@include gradient(gradient-colors($secondary-color, $primary-color),gradient-colors($primary-color, $secondary-color));
+    font-family: 'Exo2', sans-serif;
+}
+.wrapper {
+	margin: 0 auto;
+	float: none;
+	// height: pxtoem(1300px);
+	background: {
+		color: light-blue();	
+	}
+}
+.sr-only {
+	display: none;
+	height: 0;
+	width: 0;
+}
+header {
+	background: {
+		color: white;
+		image: url("../images/armsOut_400px.jpg");
+	}
+	height: pxtoem(320px);
+	position: relative;
+}
+h2,h3,h4,h5,h6 {
+	font-family: 'Exo', sans-serif;
+}
+h1{
+	@extend h2;
+	font-size: pxtoem(50px);
+}
+h2 {
+	font-size: pxtoem(30px);
+}
+p.catchphrase {
+	font-size: pxtoem(20px);
+	font-style: italic;
+}
+main {
+	h2:first-of-type {
+		margin: {
+			top: 3em;
+		}
+	}
+	p {
+		&:first-of-type {
+			margin: {
+				bottom: 7em;
+			}
+		}
+		&:last-of-type {
+			margin: {
+				bottom: 7em;
+			}
+		}
+	}
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {@include triangle(60px, $primary-color, down);}
+    25%  {@include triangle(58px, desaturate($primary-color, 50%), down);}
+    50%  {@include triangle(55px, desaturate($primary-color, 70%), down);}
+    75%  {@include triangle(58px, desaturate($primary-color, 50%), down);}
+    100% {@include triangle(60px, $primary-color, down);}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {@include triangle(60px, $primary-color, down);}
+    25%  {@include triangle(58px, desaturate($primary-color, 50%), down);}
+    50%  {@include triangle(55px, desaturate($primary-color, 70%), down);}
+    75%  {@include triangle(58px, desaturate($primary-color, 50%), down);}
+    100% {@include triangle(60px, $primary-color, down);}
+}
+.down {
+	@include triangle(60px, $primary-color, down);
+	margin: 0 auto;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    &:hover {
+    	// border: 15px solid special-color($primary-color, $secondary-color, "light",20%);
+		background: {
+			color: special-color($primary-color, $secondary-color, "light",20%);
+		}
+		@include border-bottom-radius(100px);
+	}
+}
+
+.tiles {
+	margin: {
+		bottom: 7em;
+		top: 7em;
+	}
+}
+nav {
+	position: absolute;
+	bottom: pxtoem(-16px);
+	width: 100%;
+	font-weight: 300;
+	ul {
+		list-style-type: none;
+		overflow: auto;
+		a {
+			background: {
+				color: special-color($secondary-color, $primary-color, "light",30%);
+			}	
+			color: black;
+			text-decoration: none;
+			font-weight: bold;
+			float: left;
+			padding: 1em;
+			margin: {
+				right: 2em;
+			}
+			@include border-top-radius(5px);
+			&:hover {
+				background: {
+					color: special-color($primary-color, $secondary-color, "light",20%);
+				}
+				text-decoration: none;
+			}
+		}
+	}
+}
+.iamhere {
+	background: {
+		color: light-blue();
+	}
+	&:hover { //the user is already here
+		background: {
+			color: light-blue();
+		}
+	}
+}
+// .wrapper div:nth-child(2){
+.center {
+	text-align: center;
+	padding-top: 5em;
+}
+a.return {
+	@include border-top-radius(5px);
+	@include border-bottom-radius(5px);
+	position: fixed;
+	background-color: hsla(0%,0%,100%, 1);
+	bottom: 3.5em;
+	padding: .5em;
+	font-size: 15px;
+	color: black;
+	text-decoration: none;
+	right: 4.5em;
+	&:hover {
+		background: {
+			color: special-color($primary-color, $secondary-color, "light",20%);
+		}
+		text-decoration: none;
+	}
+}
+// section {
+// 	background-color:white;
+// 	margin: 1em;
+// }
+//bourbon refill bullets
+.bullets {
+  $base-line-height: 1.5em !default;
+  $action-color: tint($primary-color,20%) !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  $icon-bullet-size: 4em;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em;
+  margin-bottom: $base-line-height;
+  overflow: auto;
+  padding: 0;
+
+  .bullet {
+    flex-basis: 20em;
+    flex-grow: 1;
+    background-color: white;
+    margin-bottom:1em;
+  }
+
+  .bullet-icon {
+    background: $action-color;
+    border-radius: 50%;
+    float: left;
+    height: $icon-bullet-size;
+    padding: $icon-bullet-size / 10;
+    width: $icon-bullet-size;
+    img {
+    	border-radius: 50%;
+    }
+  }
+
+  .bullet-icon-1 {
+    background: $action-color;
+  }
+
+  .bullet-icon-2 {
+    background: adjust-hue($action-color, -30%);
+  }
+
+  .bullet-icon-3 {
+    background: adjust-hue($action-color, -70%);
+  }
+
+  .bullet-content {
+    margin-bottom: 2em;
+    margin-left: $icon-bullet-size * 1.4;
+  }
+
+  h2 {
+    border-bottom: 1px solid transparentize($base-font-color, 0.8);
+    display: inline-block;
+    font-size: $icon-bullet-size / 2.5;
+    margin: 0 0 ($icon-bullet-size / 6) 0;
+    padding-top: $icon-bullet-size / 7;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+//end bourbon refill bullets
+//bourbon refill component hover tile animation  400x160
+.hover-tile-outer {
+  $base-border-color: gainsboro !default;
+  $base-line-height: 1.5em !default;
+  $medium-screen: 40em !default;
+  $hover-tile-height: pxtoem(400px);
+  $base-spacing: 1.5em;
+  // background: url("../images/carrot400px.jpg");
+  @include hoverTiles;
+  background-color: beige;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid $base-border-color;
+  cursor: pointer;
+  height: $hover-tile-height;
+  margin-bottom: $base-line-height;
+
+  @include media($medium-screen) {
+    width: 40%;
+  }
+
+  .hover-tile-container {
+    height: $hover-tile-height;
+    overflow: hidden;
+  }
+
+  .hover-tile-container:hover > .hover-tile {
+    transform: translate(0, -100%);
+  }
+
+  .hover-tile {
+    background: inherit;
+    color: black;
+    height: inherit;
+    overflow: hidden;
+    padding: $base-spacing;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .hover-tile-hidden {
+    background: transparentize(#fff, 0.1);
+
+    p {
+      // color: transparentize(#fff, 0.3);
+      line-height: $base-line-height;
+    }
+
+    h4 {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}//end bourbon refill component hover tile
+
+// bourbon refill footer pattern
+// Uncomment this for a sticky footer.
+//
+// .wrapper-for-content-outside-of-footer {
+//   min-height: 100%;
+//   height: auto !important;
+//   height: 100%;
+//   margin: 0 auto -4em;
+// }
+
+// html, body {
+//  height: 100%;
+// }
+
+// .wrapper-for-content-outside-of-footer::after {
+//   content: "";
+//   display: block;
+// }
+
+// .footer-2, .wrapper-for-content-outside-of-footer::after {
+//   height: 17em;
+
+//   @include media($large-screen) {
+//     height: 4em;
+//   }
+// }
+.footer-2 {
+  $base-spacing: 1.5em !default;
+  $action-color: /*#477DCA*/ $primary-color !default;
+  $medium-screen: 40em !default;
+  $large-screen: 53.75em !default;
+  $footer-background: desaturate(darken($action-color, 20%), 30%);
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, 0.6);
+  $footer-disclaimer-color: transparentize($footer-color, 0.6);
+
+  background: $footer-background;
+  display: inline-block;
+  padding: $base-spacing;
+  width: 100%;
+
+  .footer-logo {
+    margin-bottom: 1em;
+    margin-right: 1em;
+
+    @include media($large-screen) {
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+
+  .footer-logo img {
+    height: 1.6em;
+  }
+
+  ul {
+    line-height: 1.5em;
+    margin: 0 0 1em 0;
+    padding: 0;
+
+    @include media($large-screen) {
+      float: left;
+      line-height: 1.8em;
+      margin-bottom: 0;
+      margin-left: 1em;
+    }
+  }
+
+  ul li {
+    list-style: none;
+    padding-right: 1em;
+
+    @include media($large-screen) {
+      display: inline;
+      text-align: left;
+    }
+  }
+
+  ul li a {
+    color: $footer-link-color;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  .footer-secondary-links {
+    @include media($large-screen) {
+      float: right;
+    }
+
+    li {
+      font-size: 0.8em;
+    }
+
+    ul.footer-social {
+      margin: 1em 0 0 0;
+
+      @include media($large-screen) {
+        float: right;
+        margin-top: 0;
+      }
+
+      li {
+        float: left;
+        font-size: 1em;
+        line-height: 0;
+        margin: 0;
+        padding-right: 0.7em;
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      img {
+        height: 1.6em;
+        opacity: 0.7;
+        padding: 1px;
+
+        &:focus,
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+// sticky footer http://mystrd.at/modern-clean-css-sticky-footer/
+// html {
+//     position: relative;
+//     min-height: 100%;
+// }
+// body {
+//     margin: 0 0 60px; /* bottom = footer height */
+// }
+// footer.footer-2 {
+//     position: absolute;
+//     // left: 0;
+//     bottom: 0;
+//     height: 60px;
+//     // width: 100%;
+// }
+
+/********************************************************************************************************/
+/* Responsive Menu Styling   adapted from http://www.w3schools.com/howto/howto_js_topnav.asp            */
+/********************************************************************************************************/
+
+  /* Remove margins and padding from the list, and add a black background color */
+// ul.topnav {
+    // list-style-type: none;
+    // margin: 0;
+    // padding: 0;
+//     overflow: hidden;
+// }
+
+/* Float the list items side by side */
+// ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    text-align: center;
+    transition: 0.3s;
+/*    font-size: 17px;
+*/}
+
+/* Change background color of links on hover */
+/*ul.topnav li a:hover {background-color: #555;}
+*/
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {
+	display: none;
+}
+
+ /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+	// nav {
+	// 	position: relative;
+	// 	bottom: auto;
+	// }
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+    padding: .5em;
+    margin: {
+    	right: .2em;
+    }
+    // @include border-top-radius(0px);
+  }
+}
+
+/*******************************************************
+ * MY GRID SYSTEM                                      *
+ * I wanted to try a 6 col grid system this time       *
+ *******************************************************/
+/* .row::after 'if you float you must clear' */
+.row::after {
+	content:"";
+	display: table;
+	clear: both;
+}
+/* for each col setup the float and margin, and a height 
+   for internet explorer*/
+[class *='col-'] {
+	float: left;
+/* example for 2% margin col calculation: 
+   100 - (2 x (# of columns+1)) =  remaining width / # of columns = width of each column*/
+	margin-left: 0%;
+	/*give it a height of one pixel for explorer, if we had a 
+	  box with nothing in it ie behaves badly*/
+	min-height: 1px;
+	padding: .5em;
+	// background-color: white;
+	width: 100%;
+}
+// .row.sameHeight {
+// 	overflow: hidden;
+// }
+// .sameHeight [class *='col-'] {
+// 	margin-bottom: -99999px;
+//     padding-bottom: 99999px;
+// }

@@ -1,0 +1,169 @@
+// mixins
+
+//mixin from class
+@mixin mq($breakpoint: $medium){
+  @if $breakpoint == $large {
+    @media (min-width: $large) {
+    	@content;
+    }
+  }
+  @else {
+    @media (min-width: $medium) and (max-width: $large) {
+    	@content;
+    }
+  }
+} //end mq
+
+@mixin header {
+	header {
+		background: {
+			color: white;
+			image: url("../images/armsOut_1300px.jpg");
+		}
+		height: pxtoem(400px);
+	}
+}
+
+@mixin hoverTiles {
+	@for $i from 1 through $tiles {
+		&.tile_#{$i} {
+    		background-image: url(inspect("../images/"+$i+"tile400px.jpg"));
+  		}
+	}
+}
+
+@function light-blue {
+	@return special-color($secondary-color, $primary-color, "light");
+}
+
+// custom function with if else
+@function special-color($mix, $base, $setting, $amount:56%) {
+	@if $setting == "light" {
+		@return lighten(mix-neutral(harmonious-mix($mix, $base)),$amount);
+	}
+	@elseif $setting == "contrast" {
+		@return pick-contrast(mix-neutral(harmonious-mix($mix, $base)),$amount);
+	}
+	@else {
+		@return mix-neutral(harmonious-mix($mix, $base));
+	}
+
+}
+// lighter colors for subtle gradient
+@function gradient-colors($mix, $base) {
+	@return desaturate(lighten(harmonious-mix($mix, $base),40%),30%);
+}
+
+// http://tallys.github.io/color-theory/
+@function harmonious-mix($mix, $base) {
+	@if (is-cool-color($mix)){
+		@if is-high-key-value($base) {
+			@return mix($mix, $base, 11%);
+		}
+		@else {
+			@return mix($mix, $base, 16%);
+		}
+	}
+	@else {
+		@if is-high-key-value($base) {
+			@return mix($mix, $base, 13%);
+		}
+		@else {
+			@return mix($mix, $base, 23%);
+		}
+	}
+}
+@function mix-neutral($color) {
+	@if (is-highest-key-value($color)) {
+		@if is-high-key-value(complement($color)) {
+			@return mix(complement($color), $color, 19%);
+		}
+		@else {
+			@return mix(complement($color), $color, 13%);
+		}
+	}
+	@else if (is-high-key-value($color)) {
+		@if is-high-key-value(complement($color)) {
+			@return mix(complement($color), $color, 31%);
+		}
+		@else {
+			@return mix(complement($color), $color, 23%);
+		}
+	}
+	@else {
+		@if is-highest-key-value(complement($color)) {
+			@return mix(complement($color), $color, 31%);
+		}
+		@if is-high-key-value(complement($color)) {
+			@return mix(complement($color), $color, 26%);
+		}
+		@else {
+			@return mix(complement($color), $color, 23%);
+		}
+	}
+}
+@function pick-contrast($color) {
+	@if is-high-key-value($color){
+		@if lightness($color) < 30% {
+			@return lighten(complement($color), 86);
+		}
+		@else if lightness($color) > 70% {
+			@return darken(complement($color), 68);
+		}
+		@else {
+			@return darken(complement($color), 53);
+		}
+} @else {
+	@if lightness($color) < 30% {
+			@return lighten(complement($color), 86);
+		}
+		@else if lightness($color) > 70% {
+			@return darken(complement($color), 68);
+		}
+		@else {
+			@return lighten(complement($color), 53);
+		}
+	}
+}//end // http://tallys.github.io/color-theory/
+
+// @mixin mq($breakpoint: $small){
+//   @if $breakpoint == $small {
+//     @media (min-width: $small) {
+//       @content;
+//     }
+//   }
+//   @else if $breakpoint == $sm-medium {
+//     @media (min-width: $small) and (max-width: $sm-medium) {
+//       @content;
+//     }
+//   }
+//   @else {
+//     @media (min-width: $medium) {
+//       @content;
+//     }
+//   }
+// } //end mq
+
+@mixin gradient($color1, $color2){
+	// adapted from https://www.w3schools.com/css/css3_gradients.asp
+	background: $color1; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, $color1, $color2); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, $color1, $color2); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, $color1, $color2); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, $color1, $color2); /* Standard syntax */
+}
+// custom mixin for colors
+// @function _color($color, $attribute) {
+// 	@if $color == "primary" {
+// 		@if $attribute == $transparent {
+// 			@return transparentize(darken(hsla(120%, 100%, 40%, 1), 10%),.1);
+// 		}
+// 		@return darken(hsla(120%, 100%, 40%, 1), 10%);
+// 	}
+// 	@else if $color == "secondary" {
+// 		@return desaturate(tint(lighten($primary-color,10%),70%), 5%);
+// 	}
+// 	@else {
+// 		@return red;
+// 	}
+// }

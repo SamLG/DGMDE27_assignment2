@@ -1,0 +1,994 @@
+@charset "UTF-8";
+/*!normalize.css v2.1.3|MIT License|git.io/normalize*/
+/* line 10, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 26, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 34, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 41, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+[hidden],
+template {
+  display: none;
+}
+
+/* line 51, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 57, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+body {
+  margin: 0;
+}
+
+/* line 64, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+a {
+  background: transparent;
+}
+
+/* line 69, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 74, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 83, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 89, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 94, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 100, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+dfn {
+  font-style: italic;
+}
+
+/* line 105, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 111, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+mark {
+  background: #FF0;
+  color: #000;
+}
+
+/* line 117, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 126, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+pre {
+  white-space: pre-wrap;
+}
+
+/* line 131, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 136, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+small {
+  font-size: 80%;
+}
+
+/* line 141, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 148, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+sup {
+  top: -0.5em;
+}
+
+/* line 151, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 158, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+img {
+  border: 0;
+}
+
+/* line 163, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 170, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+figure {
+  margin: 0;
+}
+
+/* line 177, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+fieldset {
+  border: 1px solid #C0C0C0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 185, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 193, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 204, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+button,
+input {
+  line-height: normal;
+}
+
+/* line 213, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 223, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 232, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 239, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 248, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+/* line 255, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 261, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 269, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 277, /Applications/Scout-App.app/Contents/Resources/app.nw/scout-files/mixins/_normalize.sass */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 4, /Applications/Scout-App.app/Contents/Resources/app.nw/bower_components/neat/app/assets/stylesheets/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, /Applications/Scout-App.app/Contents/Resources/app.nw/bower_components/neat/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/******************************
+/* color pallette            */
+/******************************
+primary blue (this color is the basis for all others and is pulled from the main image, colors are mixed to mimic the sunset in the picture)
+rgb(27, 98, 152)	
+hsl(206, 70%, 35%)
+#1b6298	
+
+light blue 
+RGB: 225 225 244
+HSL: 240° 46% 92%
+Hex: #E1E1F4
+*/
+/* 
+  declare border-box sizing
+  http://www.paulirish.com/2012/box-sizing-border-box-ftw/ 
+*/
+/* line 5, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* line 9, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 12, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+body {
+  background: #a5c3da;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #a5c3da, #dabca5);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #a5c3da, #dabca5);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #a5c3da, #dabca5);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #a5c3da, #dabca5);
+  /* Standard syntax */
+  font-family: 'Exo2', sans-serif;
+}
+
+/* line 16, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.wrapper {
+  margin: 0 auto;
+  float: none;
+  background-color: #deeaf2;
+}
+
+/* line 24, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.sr-only {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+/* line 29, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+header {
+  background-color: white;
+  background-image: url("../images/armsOut_400px.jpg");
+  height: 20em;
+  position: relative;
+}
+
+/* line 37, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+h2, h1, h3, h4, h5, h6 {
+  font-family: 'Exo', sans-serif;
+}
+
+/* line 40, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+h1 {
+  font-size: 3.125em;
+}
+
+/* line 44, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+h2, h1 {
+  font-size: 1.875em;
+}
+
+/* line 47, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+p.catchphrase {
+  font-size: 1.25em;
+  font-style: italic;
+}
+
+/* line 52, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+main h2:first-of-type, main h1:first-of-type {
+  margin-top: 3em;
+}
+
+/* line 58, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+main p:first-of-type {
+  margin-bottom: 7em;
+}
+
+/* line 63, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+main p:last-of-type {
+  margin-bottom: 7em;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0% {
+    height: 0;
+    width: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #0664ac;
+  }
+  25% {
+    height: 0;
+    width: 0;
+    border-left: 29px solid transparent;
+    border-right: 29px solid transparent;
+    border-top: 29px solid #335e80;
+  }
+  50% {
+    height: 0;
+    width: 0;
+    border-left: 27.5px solid transparent;
+    border-right: 27.5px solid transparent;
+    border-top: 27.5px solid #455c6e;
+  }
+  75% {
+    height: 0;
+    width: 0;
+    border-left: 29px solid transparent;
+    border-right: 29px solid transparent;
+    border-top: 29px solid #335e80;
+  }
+  100% {
+    height: 0;
+    width: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #0664ac;
+  }
+}
+
+/* Standard syntax */
+@keyframes example {
+  0% {
+    height: 0;
+    width: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #0664ac;
+  }
+  25% {
+    height: 0;
+    width: 0;
+    border-left: 29px solid transparent;
+    border-right: 29px solid transparent;
+    border-top: 29px solid #335e80;
+  }
+  50% {
+    height: 0;
+    width: 0;
+    border-left: 27.5px solid transparent;
+    border-right: 27.5px solid transparent;
+    border-top: 27.5px solid #455c6e;
+  }
+  75% {
+    height: 0;
+    width: 0;
+    border-left: 29px solid transparent;
+    border-right: 29px solid transparent;
+    border-top: 29px solid #335e80;
+  }
+  100% {
+    height: 0;
+    width: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #0664ac;
+  }
+}
+
+/* line 87, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.down {
+  height: 0;
+  width: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid #0664ac;
+  margin: 0 auto;
+  -webkit-animation-name: example;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s;
+  /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+/* line 95, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.down:hover {
+  background-color: #bf855a;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+/* line 104, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.tiles {
+  margin-bottom: 7em;
+  margin-top: 7em;
+}
+
+/* line 110, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+nav {
+  position: absolute;
+  bottom: -1em;
+  width: 100%;
+  font-weight: 300;
+}
+
+/* line 115, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+nav ul {
+  list-style-type: none;
+  overflow: auto;
+}
+
+/* line 118, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+nav ul a {
+  background-color: #7fabcd;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  float: left;
+  padding: 1em;
+  margin-right: 2em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* line 131, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+nav ul a:hover {
+  background-color: #bf855a;
+  text-decoration: none;
+}
+
+/* line 140, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.iamhere {
+  background-color: #deeaf2;
+}
+
+/* line 144, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.iamhere:hover {
+  background-color: #deeaf2;
+}
+
+/* line 151, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.center {
+  text-align: center;
+  padding-top: 5em;
+}
+
+/* line 155, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+a.return {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: fixed;
+  background-color: white;
+  bottom: 3.5em;
+  padding: .5em;
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+  right: 4.5em;
+}
+
+/* line 166, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+a.return:hover {
+  background-color: #bf855a;
+  text-decoration: none;
+}
+
+/* line 178, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.bullets {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em;
+  margin-bottom: 1.5em;
+  overflow: auto;
+  padding: 0;
+}
+
+/* line 192, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.bullets .bullet {
+  flex-basis: 20em;
+  flex-grow: 1;
+  background-color: white;
+  margin-bottom: 1em;
+}
+
+/* line 199, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.bullets .bullet-icon {
+  background: #3883bd;
+  border-radius: 50%;
+  float: left;
+  height: 4em;
+  padding: 0.4em;
+  width: 4em;
+}
+
+/* line 206, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.bullets .bullet-icon img {
+  border-radius: 50%;
+}
+
+/* line 211, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.bullets .bullet-icon-1 {
+  background: #3883bd;
+}
+
+/* line 215, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.bullets .bullet-icon-2 {
+  background: #38bdb5;
+}
+
+/* line 219, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.bullets .bullet-icon-3 {
+  background: #38bd5c;
+}
+
+/* line 223, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.bullets .bullet-content {
+  margin-bottom: 2em;
+  margin-left: 5.6em;
+}
+
+/* line 228, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.bullets h2, .bullets h1 {
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+  display: inline-block;
+  font-size: 1.6em;
+  margin: 0 0 0.66667em 0;
+  padding-top: 0.57143em;
+}
+
+/* line 236, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.bullets li {
+  list-style: none;
+}
+
+/* line 240, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.bullets p {
+  color: #333;
+  line-height: 1.5em;
+}
+
+/* line 245, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.bullets img {
+  max-width: 100%;
+}
+
+/* line 251, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.hover-tile-outer {
+  background-color: beige;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid gainsboro;
+  cursor: pointer;
+  height: 25em;
+  margin-bottom: 1.5em;
+}
+
+/* line 29, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+.hover-tile-outer.tile_1 {
+  background-image: url("../images/1tile400px.jpg");
+}
+
+/* line 29, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+.hover-tile-outer.tile_2 {
+  background-image: url("../images/2tile400px.jpg");
+}
+
+/* line 29, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+.hover-tile-outer.tile_3 {
+  background-image: url("../images/3tile400px.jpg");
+}
+
+/* line 29, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+.hover-tile-outer.tile_4 {
+  background-image: url("../images/4tile400px.jpg");
+}
+
+/* line 29, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+.hover-tile-outer.tile_5 {
+  background-image: url("../images/5tile400px.jpg");
+}
+
+/* line 29, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+.hover-tile-outer.tile_6 {
+  background-image: url("../images/6tile400px.jpg");
+}
+
+@media screen and (min-width: 40em) {
+  /* line 251, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  .hover-tile-outer {
+    width: 40%;
+  }
+}
+
+/* line 271, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.hover-tile-outer .hover-tile-container {
+  height: 25em;
+  overflow: hidden;
+}
+
+/* line 276, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.hover-tile-outer .hover-tile-container:hover > .hover-tile {
+  transform: translate(0, -100%);
+}
+
+/* line 280, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.hover-tile-outer .hover-tile {
+  background: inherit;
+  color: black;
+  height: inherit;
+  overflow: hidden;
+  padding: 1.5em;
+  transition: all 0.2s ease-in-out;
+}
+
+/* line 289, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.hover-tile-outer .hover-tile-hidden {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* line 292, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.hover-tile-outer .hover-tile-hidden p {
+  line-height: 1.5em;
+}
+
+/* line 297, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.hover-tile-outer .hover-tile-hidden h4 {
+  margin: 0 0 0.5em 0;
+}
+
+/* line 329, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.footer-2 {
+  background: #0e293e;
+  display: inline-block;
+  padding: 1.5em;
+  width: 100%;
+}
+
+/* line 344, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.footer-2 .footer-logo {
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
+@media screen and (min-width: 53.75em) {
+  /* line 344, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  .footer-2 .footer-logo {
+    float: left;
+    margin-bottom: 0;
+  }
+}
+
+/* line 354, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.footer-2 .footer-logo img {
+  height: 1.6em;
+}
+
+/* line 358, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.footer-2 ul {
+  line-height: 1.5em;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 53.75em) {
+  /* line 358, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  .footer-2 ul {
+    float: left;
+    line-height: 1.8em;
+    margin-bottom: 0;
+    margin-left: 1em;
+  }
+}
+
+/* line 371, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.footer-2 ul li {
+  list-style: none;
+  padding-right: 1em;
+}
+
+@media screen and (min-width: 53.75em) {
+  /* line 371, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  .footer-2 ul li {
+    display: inline;
+    text-align: left;
+  }
+}
+
+/* line 381, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.footer-2 ul li a {
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+}
+
+/* line 385, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.footer-2 ul li a:focus, .footer-2 ul li a:hover {
+  color: white;
+}
+
+@media screen and (min-width: 53.75em) {
+  /* line 391, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  .footer-2 .footer-secondary-links {
+    float: right;
+  }
+}
+
+/* line 396, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.footer-2 .footer-secondary-links li {
+  font-size: 0.8em;
+}
+
+/* line 400, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.footer-2 .footer-secondary-links ul.footer-social {
+  margin: 1em 0 0 0;
+}
+
+@media screen and (min-width: 53.75em) {
+  /* line 400, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  .footer-2 .footer-secondary-links ul.footer-social {
+    float: right;
+    margin-top: 0;
+  }
+}
+
+/* line 408, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.footer-2 .footer-secondary-links ul.footer-social li {
+  float: left;
+  font-size: 1em;
+  line-height: 0;
+  margin: 0;
+  padding-right: 0.7em;
+}
+
+/* line 415, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.footer-2 .footer-secondary-links ul.footer-social li:last-child {
+  padding-right: 0;
+}
+
+/* line 420, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.footer-2 .footer-secondary-links ul.footer-social img {
+  height: 1.6em;
+  opacity: 0.7;
+  padding: 1px;
+}
+
+/* line 425, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.footer-2 .footer-secondary-links ul.footer-social img:focus, .footer-2 .footer-secondary-links ul.footer-social img:hover {
+  opacity: 1;
+}
+
+/********************************************************************************************************/
+/* Responsive Menu Styling   adapted from http://www.w3schools.com/howto/howto_js_topnav.asp            */
+/********************************************************************************************************/
+/* Remove margins and padding from the list, and add a black background color */
+/* Float the list items side by side */
+/* Style the links inside the list items */
+/* line 465, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+ul.topnav li a {
+  display: inline-block;
+  text-align: center;
+  transition: 0.3s;
+  /*    font-size: 17px;
+*/
+}
+
+/* Change background color of links on hover */
+/*ul.topnav li a:hover {background-color: #555;}
+*/
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+/* line 476, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+ul.topnav li.icon {
+  display: none;
+}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width: 680px) {
+  /* line 486, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  ul.topnav li:not(:first-child) {
+    display: none;
+  }
+  /* line 487, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+  /* line 493, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  ul.topnav.responsive {
+    position: relative;
+  }
+  /* line 494, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  /* line 499, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  /* line 503, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+    padding: .5em;
+    margin-right: .2em;
+  }
+}
+
+/*******************************************************
+ * MY GRID SYSTEM                                      *
+ * I wanted to try a 6 col grid system this time       *
+ *******************************************************/
+/* .row::after 'if you float you must clear' */
+/* line 519, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* for each col setup the float and margin, and a height 
+   for internet explorer*/
+/* line 526, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+[class*='col-'] {
+  float: left;
+  /* example for 2% margin col calculation: 
+   100 - (2 x (# of columns+1)) =  remaining width / # of columns = width of each column*/
+  margin-left: 0%;
+  /*give it a height of one pixel for explorer, if we had a 
+	  box with nothing in it ie behaves badly*/
+  min-height: 1px;
+  padding: .5em;
+  width: 100%;
+}
+
+@media (min-width: 30em) and (max-width: 60.0625em) {
+  /* line 18, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  header {
+    background-color: white;
+    background-image: url("../images/armsOut_1300px.jpg");
+    height: 25em;
+  }
+  /* line 4, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_tablet.scss */
+  .col-1,
+  .col-2, .col-3 {
+    width: 33.33%;
+  }
+  /* line 8, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_tablet.scss */
+  .col-4,
+  .col-5,
+  .col-6 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 60.0625em) {
+  /* line 18, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  header {
+    background-color: white;
+    background-image: url("../images/armsOut_1300px.jpg");
+    height: 25em;
+  }
+  /* line 4, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  .wrapper {
+    width: 95%;
+    /*limit width on upper end of screen sizes, because overly long lines of text are fatiguing to read
+		  this can be a design call*/
+    max-width: 81.25em;
+  }
+  /* line 10, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  h1 {
+    bottom: 0.4375em;
+    position: absolute;
+    font-size: 4.0625em;
+  }
+  /* line 16, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  p.catchphrase {
+    font-size: 2.5em;
+    bottom: 0.625em;
+    right: 0;
+    position: absolute;
+    padding-left: 5em;
+  }
+  /* line 23, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  .col-1 {
+    /*7 margin spaces*/
+    width: 16.66%;
+    /*	background-color: #33ccff;*/
+  }
+  /* line 28, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  .col-2 {
+    width: 33.33%;
+    /*	background-color: #009933;*/
+  }
+  /* line 32, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  .col-2-spaced {
+    margin-left: 1.1em;
+    width: 30.66%;
+  }
+  /* line 36, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  .col-3 {
+    width: 50%;
+    /*	background-color: #ffffcc;*/
+  }
+  /* line 40, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  .col-4 {
+    width: 66.66%;
+  }
+  /* line 43, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  .col-5 {
+    width: 83.33%;
+  }
+  /* line 46, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  .col-6 {
+    width: 100%;
+    /*100-(2*2)*/
+    /*	background-color: #ccffff;*/
+  }
+  /* line 50, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  footer {
+    margin-top: 5em;
+  }
+}
+
+/*# sourceMappingURL=../css/main.map */
