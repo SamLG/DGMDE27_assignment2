@@ -1,6 +1,7 @@
 // media queries for site: desktop, site is mobile first
+@include mq($large-md){
+}
 @include mq($large) {
-	@include responsive-img(1300, 400, "header")
 	.wrapper {
 		width: 95%;
 		/*limit width on upper end of screen sizes, because overly long lines of text are fatiguing to read
@@ -23,11 +24,9 @@
 	.col-1 {
 		/*7 margin spaces*/
 		width: 16.66%;
-		/*	background-color: #33ccff;*/ 
 	}
 	.col-2 /*4 margin spaces*/{
 		width: 33.33%;
-		/*	background-color: #009933;*/ 
 	}
 	.col-2-spaced {
 		margin-left: 1.1em;
@@ -35,7 +34,6 @@
 	}
 	.col-3 {
 		width: 50%;
-		/*	background-color: #ffffcc;*/ 
 	}
 	.col-4 { //one column .col-4 and one column .col-2 or two column .col-1
 		width: 66.66%;
@@ -45,33 +43,8 @@
 	}
 	.col-6 { //one column .col-6
 		width: 100%; /*100-(2*2)*/
-		/*	background-color: #ccffff;*/ 
 	}
 	footer {
 		margin-top: 5em;
 	}
 }
-
-	// .col-1 {
-	// 	/*7 margin spaces*/
-	// 	width: 15.5% /*2 margin spaces 14.333333%*/;
-	// 	/*	background-color: #33ccff;*/ 
-	// }
-	// .col-2 /*4 margin spaces*/{
-	// 	width: 32% /*30.666667%*/;
-	// 	/*	background-color: #009933;*/ 
-	// }
-	// .col-3 {
-	// 	width: 49% /*47%*/ ;
-	// 	/*	background-color: #ffffcc;*/ 
-	// }
-	// .col-4 { //one column .col-4 and one column .col-2 or two column .col-1
-	// 	width: 63.333333%;
-	// }
-	// .col-5 { //one column .col-5 and one column .col-1 
-	// 	width: 79.666666%; 
-	// }
-	// .col-6 { //one column .col-6
-	// 	width: 100% /*96%*/; /*100-(2*2)*/
-	// 	/*	background-color: #ccffff;*/ 
-	// }

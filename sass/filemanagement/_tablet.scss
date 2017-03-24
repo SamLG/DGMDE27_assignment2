@@ -1,6 +1,5 @@
 // media queries for site: desktop, site is mobile first
 @include mq($medium) {
-	@include responsive-img(1300, 1300, "header")
 	.col-1,
 	.col-2, .col-3 {
 		width: 33.33%; 

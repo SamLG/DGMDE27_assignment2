@@ -1,56 +1,83 @@
 // mixins
 
+// I tried to make a color scheme generator based on split-compliment, but for some reason my function wasn't being recognized
+// $primary-color: hsl(240, 100%, 50%);
+// $secondary-color: split-compliment($primary-color);
+// $tertiary-color: split-compliment($primary-color);
+// @function split-compliment($color){
+// 	   @if hue($color) - 150deg >= 0 {
+//       @return adjust-hue($base-color, 150deg);
+// 	// }
+// 	// @else {
+// 	// 	@return adjust-hue($base-color, -150deg);
+// 	// }
+// }
+
+@mixin typescale($size, $height) {
+	font-size: $size;
+	line-height: $height;
+}
 //mixin from class
 @mixin mq($breakpoint: $medium){
   @if $breakpoint == $large {
     @media (min-width: $large) {
+    	@include background-img($large-background-size, $large-background-height);
+    	.hover-tile-outer {
+    		@include hoverTiles($large-hover-tile-size);
+    	}
+    	@content;
+    }
+  }
+  @elseif $breakpoint == $large-md {
+    @media (min-width: $medium) and (max-width: $large-md) {
+    	@include background-img($large-md-background-size, $large-background-height);
+    	.hover-tile-outer {
+    		@include hoverTiles($large-md-hover-tile-size);
+    	}
     	@content;
     }
   }
   @else {
     @media (min-width: $medium) and (max-width: $large) {
+    	@include background-img($medium-background-size, $medium-background-height);
+    	.hover-tile-outer {
+    		@include hoverTiles($medium-hover-tile-size);
+    	}
     	@content;
     }
   }
 } //end mq
 
-@mixin responsive-img($size, $height, $item) {
-	@if $item == "header" {
-		@if $size == 320 {
-			@include background-img($size, $height);
-		}
-		@elseif $size == 1300 {
-			@include background-img($size, $height);
-		}
-		@else {
-			@include background-img($size, $height);
-		}
-	}
-}
-
+// custom mixin for dynamically injecting header image
 @mixin background-img ($size, $height) {
-	header {
+	header{
 		background: {
 			color: white;
 			image: url("../images/armsOut_"+$size+"px.jpg");
 		}
-		height: pxtoem($height);
+		height: $height;
 	}
 }
 
-@mixin hoverTiles {
+// custom mixin for dynamically injecting tile images
+@mixin hoverTiles($size) {
 	@for $i from 1 through $tiles {
 		&.tile_#{$i} {
-    		background-image: url(inspect("../images/"+$i+"tile400px.jpg"));
+    		background: {
+    			image: url(inspect("../images/"+$i+"tile"+$size+"px.jpg"));
+    			position: center;
+    		}
   		}
 	}
 }
 
+// custom that mixes up specific shade of blue
 @function light-blue {
 	@return special-color($secondary-color, $primary-color, "light");
 }
 
-// custom function with if else
+// custom function with if else to allow for quick access of light, contrast, and regular altered versions of colors
+//each color is neutralized and made harmonious, before any continued styling
 @function special-color($mix, $base, $setting, $amount:56%) {
 	@if $setting == "light" {
 		@return lighten(mix-neutral(harmonious-mix($mix, $base)),$amount);
@@ -61,11 +88,28 @@
 	@else {
 		@return mix-neutral(harmonious-mix($mix, $base));
 	}
-
 }
 // lighter colors for subtle gradient
 @function gradient-colors($mix, $base) {
 	@return desaturate(lighten(harmonious-mix($mix, $base),40%),30%);
+}
+
+//custom mixin for gradient
+@mixin gradient($color1, $color2){
+	// adapted from https://www.w3schools.com/css/css3_gradients.asp
+	background: $color1; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, $color1, $color2); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, $color1, $color2); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, $color1, $color2); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, $color1, $color2); /* Standard syntax */
+}
+
+@mixin triangleChunk{
+	0%   {@include triangle(60px, $primary-color, down);}
+    25%  {@include triangle(58px, desaturate($primary-color, 50%), down);}
+    50%  {@include triangle(55px, desaturate($primary-color, 70%), down);}
+    75%  {@include triangle(58px, desaturate($primary-color, 50%), down);}
+    100% {@include triangle(60px, $primary-color, down);}
 }
 
 // http://tallys.github.io/color-theory/
@@ -139,45 +183,3 @@
 		}
 	}
 }//end // http://tallys.github.io/color-theory/
-
-// @mixin mq($breakpoint: $small){
-//   @if $breakpoint == $small {
-//     @media (min-width: $small) {
-//       @content;
-//     }
-//   }
-//   @else if $breakpoint == $sm-medium {
-//     @media (min-width: $small) and (max-width: $sm-medium) {
-//       @content;
-//     }
-//   }
-//   @else {
-//     @media (min-width: $medium) {
-//       @content;
-//     }
-//   }
-// } //end mq
-
-@mixin gradient($color1, $color2){
-	// adapted from https://www.w3schools.com/css/css3_gradients.asp
-	background: $color1; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(left top, $color1, $color2); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(bottom right, $color1, $color2); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(bottom right, $color1, $color2); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to bottom right, $color1, $color2); /* Standard syntax */
-}
-// custom mixin for colors
-// @function _color($color, $attribute) {
-// 	@if $color == "primary" {
-// 		@if $attribute == $transparent {
-// 			@return transparentize(darken(hsla(120%, 100%, 40%, 1), 10%),.1);
-// 		}
-// 		@return darken(hsla(120%, 100%, 40%, 1), 10%);
-// 	}
-// 	@else if $color == "secondary" {
-// 		@return desaturate(tint(lighten($primary-color,10%),70%), 5%);
-// 	}
-// 	@else {
-// 		@return red;
-// 	}
-// }

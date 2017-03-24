@@ -10,8 +10,10 @@ html {
 	box-sizing: inherit;
 }
 body {
-	@include gradient(gradient-colors($secondary-color, $primary-color),gradient-colors($primary-color, $secondary-color));
-    font-family: 'Exo2', sans-serif;
+	@include gradient(light-blue(),gradient-colors($primary-color, $secondary-color));
+    font: {
+    	family: 'Exo2', sans-serif;
+    }
 }
 .wrapper {
 	margin: 0 auto;
@@ -27,7 +29,11 @@ body {
 	width: 0;
 }
 header {
-	@include responsive-img(320, 320, "header")
+	background: {
+		color: white;
+		image: url("../images/armsOut_480px.jpg");
+	}
+	height: pxtoem(320px);
 	position: relative;
 }
 h2,h3,h4,h5,h6 {
@@ -63,23 +69,11 @@ main {
 		}
 	}
 }
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes example {
-    0%   {@include triangle(60px, $primary-color, down);}
-    25%  {@include triangle(58px, desaturate($primary-color, 50%), down);}
-    50%  {@include triangle(55px, desaturate($primary-color, 70%), down);}
-    75%  {@include triangle(58px, desaturate($primary-color, 50%), down);}
-    100% {@include triangle(60px, $primary-color, down);}
+/* Safari 4.0 - 8.0 & Standard syntax */
+@-webkit-keyframes example, @keyframes example {
+	@include triangleChunk;
 }
 
-/* Standard syntax */
-@keyframes example {
-    0%   {@include triangle(60px, $primary-color, down);}
-    25%  {@include triangle(58px, desaturate($primary-color, 50%), down);}
-    50%  {@include triangle(55px, desaturate($primary-color, 70%), down);}
-    75%  {@include triangle(58px, desaturate($primary-color, 50%), down);}
-    100% {@include triangle(60px, $primary-color, down);}
-}
 .down {
 	@include triangle(60px, $primary-color, down);
 	margin: 0 auto;
@@ -251,7 +245,7 @@ a.return {
   $hover-tile-height: pxtoem(400px);
   $base-spacing: 1.5em;
   // background: url("../images/carrot400px.jpg");
-  @include hoverTiles;
+  @include hoverTiles($small-hover-tile-size);
   background-color: beige;
   background-position: top;
   background-size: cover;
@@ -324,7 +318,7 @@ a.return {
 // }
 .footer-2 {
   $base-spacing: 1.5em !default;
-  $action-color: /*#477DCA*/ $primary-color !default;
+  $action-color: $primary-color !default;
   $medium-screen: 40em !default;
   $large-screen: 53.75em !default;
   $footer-background: desaturate(darken($action-color, 20%), 30%);
@@ -479,7 +473,9 @@ ul.topnav li.icon {
 	// 	position: relative;
 	// 	bottom: auto;
 	// }
-  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li:not(:first-child) {
+  	display: none;
+  }
   ul.topnav li.icon {
     float: right;
     display: inline-block;

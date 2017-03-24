@@ -3,11 +3,9 @@
 // built in sass functions: darken, hsla, desaturate, lighten 
 // is cool color and low key value
 $primary-color: saturate(hsl(206%, 23%, 35%),70%);
-// desaturate(darken(hsla(240%, 100%, 50%, 1),10%),5%);
 //functions http://bourbon.io/docs/#tint-shade, I have my second color based on my first
 $secondary-color: complement($primary-color);
 // tint(hsla(hue(#0000ff), saturation(#0000ff), lightness(#0000ff), 1),80%);
-$tertiary-color: hsla(hue(#ffff00), saturation(#ffff00), lightness(#ffff00), 1);
 
 /******************************
 /* color pallette            */
@@ -28,8 +26,18 @@ $base-font-size: 16px;
 
 //media query values, site built mobile first
 // $sm-md: ;
-$medium: pxtoem(480px); //tablet
-$large: pxtoem(961px); //desktop
+$small-hover-tile-size: "400";
+$medium: pxtoem(480px); //tablet 30em
+	$medium-background-size: "1300";
+	$medium-background-height: 400px;
+	$medium-hover-tile-size: "400";
+$large-md: pxtoem(960px); //60em
+	$large-md-background-size: "960";
+	$large-md-hover-tile-size: "960";
+$large: pxtoem(961px); //desktop 60.063em
+	$large-background-size: "1300";
+	$large-background-height: 400px;
+	$large-hover-tile-size: "400";
 
 //other
 $virtualTiles: 3;
