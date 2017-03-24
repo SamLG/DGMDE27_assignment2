@@ -28,15 +28,14 @@ $base-font-size: 16px;
 // $sm-md: ;
 $small-hover-tile-size: "400";
 $medium: pxtoem(480px); //tablet 30em
-	$medium-background-size: "1300";
-	$medium-background-height: 400px;
+	$medium-background-size: "960";
 	$medium-hover-tile-size: "400";
-$large-md: pxtoem(960px); //60em
-	$large-md-background-size: "960";
+$special-md: pxtoem(720px); //special breakpoint for background image
+$special-md-background-size: "720";
+$large-md: pxtoem(960px); //60em this break is needed because it is a point when the tiles expand and the background no longer looks right
 	$large-md-hover-tile-size: "960";
 $large: pxtoem(961px); //desktop 60.063em
 	$large-background-size: "1300";
-	$large-background-height: 400px;
 	$large-hover-tile-size: "400";
 
 //other

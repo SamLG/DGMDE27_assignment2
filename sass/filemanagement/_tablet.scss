@@ -1,5 +1,13 @@
 // media queries for site: desktop, site is mobile first
 @include mq($medium) {
+	.title {
+		bottom: 5em;
+		position:absolute;
+	}
+	@include background-img($medium-background-size);
+    .hover-tile-outer {
+    	@include hoverTiles($medium-hover-tile-size);
+    }
 	.col-1,
 	.col-2, .col-3 {
 		width: 33.33%; 
@@ -9,4 +17,7 @@
 	.col-6 {
 		width: 100%;
 	}
+}
+@include mq($special-md){
+	@include background-img($special-md-background-size);
 }

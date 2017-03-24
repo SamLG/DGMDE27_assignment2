@@ -1,5 +1,8 @@
 // media queries for site: desktop, site is mobile first
 @include mq($large-md){
+    .hover-tile-outer {
+    	@include hoverTiles($large-md-hover-tile-size);
+   	}
 }
 @include mq($large) {
 	.wrapper {
@@ -8,19 +11,14 @@
 		  this can be a design call*/
 		max-width: pxtoem(1300px);
 	}
-	h1 {
-		bottom: pxtoem(7px);
+	.title {
+		bottom: 6em;
 		position:absolute;
-		font-size: pxtoem(65px);
-		// left: .5em;
 	}
-	p.catchphrase {
-		font-size: pxtoem(40px);
-		bottom: pxtoem(10px);
-		right: 0;
-		position:absolute;
-		padding-left: 5em;
-	}
+	@include background-img($large-background-size);
+    .hover-tile-outer {
+    	@include hoverTiles($large-hover-tile-size);
+    }
 	.col-1 {
 		/*7 margin spaces*/
 		width: 16.66%;

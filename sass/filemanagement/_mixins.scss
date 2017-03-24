@@ -21,41 +21,33 @@
 @mixin mq($breakpoint: $medium){
   @if $breakpoint == $large {
     @media (min-width: $large) {
-    	@include background-img($large-background-size, $large-background-height);
-    	.hover-tile-outer {
-    		@include hoverTiles($large-hover-tile-size);
-    	}
+    	@content;
+    }
+  }
+  @elseif $breakpoint == $special-md {
+    @media (min-width: $medium) and (max-width: $special-md) {
     	@content;
     }
   }
   @elseif $breakpoint == $large-md {
     @media (min-width: $medium) and (max-width: $large-md) {
-    	@include background-img($large-md-background-size, $large-background-height);
-    	.hover-tile-outer {
-    		@include hoverTiles($large-md-hover-tile-size);
-    	}
     	@content;
     }
   }
   @else {
     @media (min-width: $medium) and (max-width: $large) {
-    	@include background-img($medium-background-size, $medium-background-height);
-    	.hover-tile-outer {
-    		@include hoverTiles($medium-hover-tile-size);
-    	}
     	@content;
     }
   }
 } //end mq
 
 // custom mixin for dynamically injecting header image
-@mixin background-img ($size, $height) {
+@mixin background-img ($size) {
 	header{
 		background: {
 			color: white;
 			image: url("../images/armsOut_"+$size+"px.jpg");
 		}
-		height: $height;
 	}
 }
 

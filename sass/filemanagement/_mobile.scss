@@ -12,7 +12,7 @@ html {
 body {
 	@include gradient(light-blue(),gradient-colors($primary-color, $secondary-color));
     font: {
-    	family: 'Exo2', sans-serif;
+    	family: 'Exo 2', Arial, sans-serif;
     }
 }
 .wrapper {
@@ -33,22 +33,14 @@ header {
 		color: white;
 		image: url("../images/armsOut_480px.jpg");
 	}
-	height: pxtoem(320px);
+	height: pxtoem(400px);
 	position: relative;
 }
-h2,h3,h4,h5,h6 {
-	font-family: 'Exo', sans-serif;
+.title {
+	margin-left: 1em;
 }
-h1{
-	@extend h2;
-	font-size: pxtoem(50px);
-}
-h2 {
-	font-size: pxtoem(30px);
-}
-p.catchphrase {
-	font-size: pxtoem(20px);
-	font-style: italic;
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Exo', "Arial Black", sans-serif;
 }
 main {
 	h2:first-of-type {
@@ -147,12 +139,12 @@ a.return {
 	@include border-bottom-radius(5px);
 	position: fixed;
 	background-color: hsla(0%,0%,100%, 1);
-	bottom: 3.5em;
+	bottom: .5em;
 	padding: .5em;
 	font-size: 15px;
 	color: black;
 	text-decoration: none;
-	right: 4.5em;
+	right: .5em;
 	&:hover {
 		background: {
 			color: special-color($primary-color, $secondary-color, "light",20%);
@@ -342,7 +334,7 @@ a.return {
   }
 
   .footer-logo img {
-    height: 1.6em;
+    height: 6.250em;
   }
 
   ul {
@@ -527,10 +519,3 @@ ul.topnav li.icon {
 	// background-color: white;
 	width: 100%;
 }
-// .row.sameHeight {
-// 	overflow: hidden;
-// }
-// .sameHeight [class *='col-'] {
-// 	margin-bottom: -99999px;
-//     padding-bottom: 99999px;
-// }

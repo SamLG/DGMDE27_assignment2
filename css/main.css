@@ -292,7 +292,7 @@ body {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, #deeaf2, #dabca5);
   /* Standard syntax */
-  font-family: 'Exo2', sans-serif;
+  font-family: 'Exo 2', Arial, sans-serif;
 }
 
 /* line 18, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
@@ -313,42 +313,31 @@ body {
 header {
   background-color: white;
   background-image: url("../images/armsOut_480px.jpg");
-  height: 20em;
+  height: 25em;
   position: relative;
 }
 
 /* line 39, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
-h2, h1, h3, h4, h5, h6 {
-  font-family: 'Exo', sans-serif;
+.title {
+  margin-left: 1em;
 }
 
 /* line 42, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
-h1 {
-  font-size: 3.125em;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Exo', "Arial Black", sans-serif;
 }
 
 /* line 46, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
-h2, h1 {
-  font-size: 1.875em;
-}
-
-/* line 49, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
-p.catchphrase {
-  font-size: 1.25em;
-  font-style: italic;
-}
-
-/* line 54, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
-main h2:first-of-type, main h1:first-of-type {
+main h2:first-of-type {
   margin-top: 3em;
 }
 
-/* line 60, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 52, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 main p:first-of-type {
   margin-bottom: 7em;
 }
 
-/* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 main p:last-of-type {
   margin-bottom: 7em;
 }
@@ -392,7 +381,7 @@ main p:last-of-type {
   }
 }
 
-/* line 77, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 69, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .down {
   height: 0;
   width: 0;
@@ -409,20 +398,20 @@ main p:last-of-type {
   animation-iteration-count: infinite;
 }
 
-/* line 85, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 77, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .down:hover {
   background-color: #bf855a;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
 }
 
-/* line 94, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 86, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .tiles {
   margin-bottom: 7em;
   margin-top: 7em;
 }
 
-/* line 100, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 92, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 nav {
   position: absolute;
   bottom: -1em;
@@ -430,13 +419,13 @@ nav {
   font-weight: 300;
 }
 
-/* line 105, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 97, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 nav ul {
   list-style-type: none;
   overflow: auto;
 }
 
-/* line 108, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 100, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 nav ul a {
   background-color: #7fabcd;
   color: black;
@@ -449,29 +438,29 @@ nav ul a {
   border-top-right-radius: 5px;
 }
 
-/* line 121, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 113, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 nav ul a:hover {
   background-color: #bf855a;
   text-decoration: none;
 }
 
-/* line 130, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 122, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .iamhere {
   background-color: #deeaf2;
 }
 
-/* line 134, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 126, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .iamhere:hover {
   background-color: #deeaf2;
 }
 
-/* line 141, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 133, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .center {
   text-align: center;
   padding-top: 5em;
 }
 
-/* line 145, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 137, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 a.return {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -479,21 +468,21 @@ a.return {
   border-bottom-right-radius: 5px;
   position: fixed;
   background-color: white;
-  bottom: 3.5em;
+  bottom: .5em;
   padding: .5em;
   font-size: 15px;
   color: black;
   text-decoration: none;
-  right: 4.5em;
+  right: .5em;
 }
 
-/* line 156, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 148, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 a.return:hover {
   background-color: #bf855a;
   text-decoration: none;
 }
 
-/* line 168, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 160, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .bullets {
   display: flex;
   flex-wrap: wrap;
@@ -503,7 +492,7 @@ a.return:hover {
   padding: 0;
 }
 
-/* line 182, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 174, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .bullets .bullet {
   flex-basis: 20em;
   flex-grow: 1;
@@ -511,7 +500,7 @@ a.return:hover {
   margin-bottom: 1em;
 }
 
-/* line 189, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 181, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .bullets .bullet-icon {
   background: #3883bd;
   border-radius: 50%;
@@ -521,34 +510,34 @@ a.return:hover {
   width: 4em;
 }
 
-/* line 196, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 188, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .bullets .bullet-icon img {
   border-radius: 50%;
 }
 
-/* line 201, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 193, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .bullets .bullet-icon-1 {
   background: #3883bd;
 }
 
-/* line 205, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 197, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .bullets .bullet-icon-2 {
   background: #38bdb5;
 }
 
-/* line 209, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 201, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .bullets .bullet-icon-3 {
   background: #38bd5c;
 }
 
-/* line 213, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 205, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .bullets .bullet-content {
   margin-bottom: 2em;
   margin-left: 5.6em;
 }
 
-/* line 218, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
-.bullets h2, .bullets h1 {
+/* line 210, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+.bullets h2 {
   border-bottom: 1px solid rgba(51, 51, 51, 0.2);
   display: inline-block;
   font-size: 1.6em;
@@ -556,23 +545,23 @@ a.return:hover {
   padding-top: 0.57143em;
 }
 
-/* line 226, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 218, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .bullets li {
   list-style: none;
 }
 
-/* line 230, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 222, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .bullets p {
   color: #333;
   line-height: 1.5em;
 }
 
-/* line 235, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 227, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .bullets img {
   max-width: 100%;
 }
 
-/* line 241, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 233, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .hover-tile-outer {
   background-color: beige;
   background-position: top;
@@ -583,61 +572,61 @@ a.return:hover {
   margin-bottom: 1.5em;
 }
 
-/* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+/* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
 .hover-tile-outer.tile_1 {
   background-image: url("../images/1tile400px.jpg");
   background-position: center;
 }
 
-/* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+/* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
 .hover-tile-outer.tile_2 {
   background-image: url("../images/2tile400px.jpg");
   background-position: center;
 }
 
-/* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+/* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
 .hover-tile-outer.tile_3 {
   background-image: url("../images/3tile400px.jpg");
   background-position: center;
 }
 
-/* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+/* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
 .hover-tile-outer.tile_4 {
   background-image: url("../images/4tile400px.jpg");
   background-position: center;
 }
 
-/* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+/* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
 .hover-tile-outer.tile_5 {
   background-image: url("../images/5tile400px.jpg");
   background-position: center;
 }
 
-/* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+/* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
 .hover-tile-outer.tile_6 {
   background-image: url("../images/6tile400px.jpg");
   background-position: center;
 }
 
 @media screen and (min-width: 40em) {
-  /* line 241, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  /* line 233, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
   .hover-tile-outer {
     width: 40%;
   }
 }
 
-/* line 261, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 253, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .hover-tile-outer .hover-tile-container {
   height: 25em;
   overflow: hidden;
 }
 
-/* line 266, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 258, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .hover-tile-outer .hover-tile-container:hover > .hover-tile {
   transform: translate(0, -100%);
 }
 
-/* line 270, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 262, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .hover-tile-outer .hover-tile {
   background: inherit;
   color: black;
@@ -647,22 +636,22 @@ a.return:hover {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 279, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 271, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .hover-tile-outer .hover-tile-hidden {
   background: rgba(255, 255, 255, 0.9);
 }
 
-/* line 282, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 274, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .hover-tile-outer .hover-tile-hidden p {
   line-height: 1.5em;
 }
 
-/* line 287, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 279, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .hover-tile-outer .hover-tile-hidden h4 {
   margin: 0 0 0.5em 0;
 }
 
-/* line 319, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 311, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .footer-2 {
   background: #0e293e;
   display: inline-block;
@@ -670,26 +659,26 @@ a.return:hover {
   width: 100%;
 }
 
-/* line 334, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 326, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .footer-2 .footer-logo {
   margin-bottom: 1em;
   margin-right: 1em;
 }
 
 @media screen and (min-width: 53.75em) {
-  /* line 334, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  /* line 326, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
   .footer-2 .footer-logo {
     float: left;
     margin-bottom: 0;
   }
 }
 
-/* line 344, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 336, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .footer-2 .footer-logo img {
-  height: 1.6em;
+  height: 6.250em;
 }
 
-/* line 348, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 340, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .footer-2 ul {
   line-height: 1.5em;
   margin: 0 0 1em 0;
@@ -697,7 +686,7 @@ a.return:hover {
 }
 
 @media screen and (min-width: 53.75em) {
-  /* line 348, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  /* line 340, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
   .footer-2 ul {
     float: left;
     line-height: 1.8em;
@@ -706,57 +695,57 @@ a.return:hover {
   }
 }
 
-/* line 361, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 353, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .footer-2 ul li {
   list-style: none;
   padding-right: 1em;
 }
 
 @media screen and (min-width: 53.75em) {
-  /* line 361, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  /* line 353, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
   .footer-2 ul li {
     display: inline;
     text-align: left;
   }
 }
 
-/* line 371, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 363, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .footer-2 ul li a {
   color: rgba(255, 255, 255, 0.4);
   text-decoration: none;
 }
 
-/* line 375, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 367, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .footer-2 ul li a:focus, .footer-2 ul li a:hover {
   color: white;
 }
 
 @media screen and (min-width: 53.75em) {
-  /* line 381, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  /* line 373, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
   .footer-2 .footer-secondary-links {
     float: right;
   }
 }
 
-/* line 386, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 378, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .footer-2 .footer-secondary-links li {
   font-size: 0.8em;
 }
 
-/* line 390, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 382, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .footer-2 .footer-secondary-links ul.footer-social {
   margin: 1em 0 0 0;
 }
 
 @media screen and (min-width: 53.75em) {
-  /* line 390, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  /* line 382, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
   .footer-2 .footer-secondary-links ul.footer-social {
     float: right;
     margin-top: 0;
   }
 }
 
-/* line 398, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 390, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .footer-2 .footer-secondary-links ul.footer-social li {
   float: left;
   font-size: 1em;
@@ -765,19 +754,19 @@ a.return:hover {
   padding-right: 0.7em;
 }
 
-/* line 405, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 397, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .footer-2 .footer-secondary-links ul.footer-social li:last-child {
   padding-right: 0;
 }
 
-/* line 410, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 402, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .footer-2 .footer-secondary-links ul.footer-social img {
   height: 1.6em;
   opacity: 0.7;
   padding: 1px;
 }
 
-/* line 415, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 407, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .footer-2 .footer-secondary-links ul.footer-social img:focus, .footer-2 .footer-secondary-links ul.footer-social img:hover {
   opacity: 1;
 }
@@ -788,7 +777,7 @@ a.return:hover {
 /* Remove margins and padding from the list, and add a black background color */
 /* Float the list items side by side */
 /* Style the links inside the list items */
-/* line 455, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 447, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 ul.topnav li a {
   display: inline-block;
   text-align: center;
@@ -801,39 +790,39 @@ ul.topnav li a {
 /*ul.topnav li a:hover {background-color: #555;}
 */
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
-/* line 466, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 458, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 ul.topnav li.icon {
   display: none;
 }
 
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
 @media screen and (max-width: 680px) {
-  /* line 476, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  /* line 468, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
   ul.topnav li:not(:first-child) {
     display: none;
   }
-  /* line 479, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  /* line 471, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
   ul.topnav li.icon {
     float: right;
     display: inline-block;
   }
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
-  /* line 485, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  /* line 477, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
   ul.topnav.responsive {
     position: relative;
   }
-  /* line 486, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  /* line 478, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
   ul.topnav.responsive li.icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  /* line 491, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  /* line 483, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
   ul.topnav.responsive li {
     float: none;
     display: inline;
   }
-  /* line 495, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+  /* line 487, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
   ul.topnav.responsive li a {
     display: block;
     text-align: left;
@@ -847,7 +836,7 @@ ul.topnav li.icon {
  * I wanted to try a 6 col grid system this time       *
  *******************************************************/
 /* .row::after 'if you float you must clear' */
-/* line 511, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 503, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 .row::after {
   content: "";
   display: table;
@@ -856,7 +845,7 @@ ul.topnav li.icon {
 
 /* for each col setup the float and margin, and a height 
    for internet explorer*/
-/* line 518, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
+/* line 510, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mobile.scss */
 [class*='col-'] {
   float: left;
   /* example for 2% margin col calculation: 
@@ -870,48 +859,52 @@ ul.topnav li.icon {
 }
 
 @media (min-width: 30em) and (max-width: 60.0625em) {
-  /* line 53, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  /* line 3, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_tablet.scss */
+  .title {
+    bottom: 5em;
+    position: absolute;
+  }
+  /* line 46, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
   header {
     background-color: white;
-    background-image: url("../images/armsOut_1300px.jpg");
-    height: 400px;
+    background-image: url("../images/armsOut_960px.jpg");
   }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
   .hover-tile-outer.tile_1 {
     background-image: url("../images/1tile400px.jpg");
     background-position: center;
   }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
   .hover-tile-outer.tile_2 {
     background-image: url("../images/2tile400px.jpg");
     background-position: center;
   }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
   .hover-tile-outer.tile_3 {
     background-image: url("../images/3tile400px.jpg");
     background-position: center;
   }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
   .hover-tile-outer.tile_4 {
     background-image: url("../images/4tile400px.jpg");
     background-position: center;
   }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
   .hover-tile-outer.tile_5 {
     background-image: url("../images/5tile400px.jpg");
     background-position: center;
   }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
   .hover-tile-outer.tile_6 {
     background-image: url("../images/6tile400px.jpg");
     background-position: center;
   }
-  /* line 3, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_tablet.scss */
+  /* line 11, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_tablet.scss */
   .col-1,
   .col-2, .col-3 {
     width: 33.33%;
   }
-  /* line 7, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_tablet.scss */
+  /* line 15, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_tablet.scss */
   .col-4,
   .col-5,
   .col-6 {
@@ -919,39 +912,41 @@ ul.topnav li.icon {
   }
 }
 
-@media (min-width: 30em) and (max-width: 60em) {
-  /* line 53, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+@media (min-width: 30em) and (max-width: 45em) {
+  /* line 46, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
   header {
     background-color: white;
-    background-image: url("../images/armsOut_960px.jpg");
-    height: 400px;
+    background-image: url("../images/armsOut_720px.jpg");
   }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+}
+
+@media (min-width: 30em) and (max-width: 60em) {
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
   .hover-tile-outer.tile_1 {
     background-image: url("../images/1tile960px.jpg");
     background-position: center;
   }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
   .hover-tile-outer.tile_2 {
     background-image: url("../images/2tile960px.jpg");
     background-position: center;
   }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
   .hover-tile-outer.tile_3 {
     background-image: url("../images/3tile960px.jpg");
     background-position: center;
   }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
   .hover-tile-outer.tile_4 {
     background-image: url("../images/4tile960px.jpg");
     background-position: center;
   }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
   .hover-tile-outer.tile_5 {
     background-image: url("../images/5tile960px.jpg");
     background-position: center;
   }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
   .hover-tile-outer.tile_6 {
     background-image: url("../images/6tile960px.jpg");
     background-position: center;
@@ -959,95 +954,85 @@ ul.topnav li.icon {
 }
 
 @media (min-width: 60.0625em) {
-  /* line 53, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
-  header {
-    background-color: white;
-    background-image: url("../images/armsOut_1300px.jpg");
-    height: 400px;
-  }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
-  .hover-tile-outer.tile_1 {
-    background-image: url("../images/1tile400px.jpg");
-    background-position: center;
-  }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
-  .hover-tile-outer.tile_2 {
-    background-image: url("../images/2tile400px.jpg");
-    background-position: center;
-  }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
-  .hover-tile-outer.tile_3 {
-    background-image: url("../images/3tile400px.jpg");
-    background-position: center;
-  }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
-  .hover-tile-outer.tile_4 {
-    background-image: url("../images/4tile400px.jpg");
-    background-position: center;
-  }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
-  .hover-tile-outer.tile_5 {
-    background-image: url("../images/5tile400px.jpg");
-    background-position: center;
-  }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
-  .hover-tile-outer.tile_6 {
-    background-image: url("../images/6tile400px.jpg");
-    background-position: center;
-  }
-  /* line 5, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  /* line 8, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
   .wrapper {
     width: 95%;
     /*limit width on upper end of screen sizes, because overly long lines of text are fatiguing to read
 		  this can be a design call*/
     max-width: 81.25em;
   }
-  /* line 11, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
-  h1 {
-    bottom: 0.4375em;
+  /* line 14, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  .title {
+    bottom: 6em;
     position: absolute;
-    font-size: 4.0625em;
   }
-  /* line 17, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
-  p.catchphrase {
-    font-size: 2.5em;
-    bottom: 0.625em;
-    right: 0;
-    position: absolute;
-    padding-left: 5em;
+  /* line 46, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  header {
+    background-color: white;
+    background-image: url("../images/armsOut_1300px.jpg");
   }
-  /* line 24, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  .hover-tile-outer.tile_1 {
+    background-image: url("../images/1tile400px.jpg");
+    background-position: center;
+  }
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  .hover-tile-outer.tile_2 {
+    background-image: url("../images/2tile400px.jpg");
+    background-position: center;
+  }
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  .hover-tile-outer.tile_3 {
+    background-image: url("../images/3tile400px.jpg");
+    background-position: center;
+  }
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  .hover-tile-outer.tile_4 {
+    background-image: url("../images/4tile400px.jpg");
+    background-position: center;
+  }
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  .hover-tile-outer.tile_5 {
+    background-image: url("../images/5tile400px.jpg");
+    background-position: center;
+  }
+  /* line 57, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
+  .hover-tile-outer.tile_6 {
+    background-image: url("../images/6tile400px.jpg");
+    background-position: center;
+  }
+  /* line 22, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
   .col-1 {
     /*7 margin spaces*/
     width: 16.66%;
   }
-  /* line 28, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  /* line 26, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
   .col-2 {
     width: 33.33%;
   }
-  /* line 31, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  /* line 29, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
   .col-2-spaced {
     margin-left: 1.1em;
     width: 30.66%;
   }
-  /* line 35, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  /* line 33, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
   .col-3 {
     width: 50%;
   }
-  /* line 38, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  /* line 36, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
   .col-4 {
     width: 66.66%;
   }
-  /* line 41, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  /* line 39, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
   .col-5 {
     width: 83.33%;
   }
-  /* line 44, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  /* line 42, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
   .col-6 {
     width: 100%;
     /*100-(2*2)*/
   }
-  /* line 47, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
+  /* line 45, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_desktop.scss */
   footer {
     margin-top: 5em;
   }
@@ -1059,150 +1044,110 @@ body {
 }
 
 /* line 5, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
-body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h1, h3, h4, h5, h6 {
+body, caption, th, td, input, textarea, select, option, legend, fieldset {
   font-size-adjust: 0.5;
 }
 
 /* line 9, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.64;
+}
+
+/* line 13, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
 .wrapper {
   font-size: 1em;
   line-height: 1.25;
 }
 
-@media (min-width: 43.75em) {
-  /* line 13, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
-  .wrapper {
-    font-size: 1em;
-    line-height: 1.375;
-  }
-}
-
-/* line 18, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+/* line 17, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
 h1 {
   font-size: 2em;
+  line-height: 1;
+}
+
+/* line 21, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+p.catchphrase {
+  font-size: 1.2em;
   line-height: 1.25;
 }
 
-@media (min-width: 43.75em) {
-  /* line 23, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+/* line 24, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+h2 {
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+/* line 28, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+h3 {
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+
+/* line 32, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+h4 {
+  font-size: 1.125em;
+  line-height: 1.5;
+  /* 1.125x body copy size = 18px */
+}
+
+@media (min-width: 30em) {
+  /* line 38, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+  .wrapper {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  /* line 41, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
   h1 {
-    font-size: 2.5em;
-    line-height: 1.125;
-    /* 2.5x body copy size = 40px */
+    font-size: 2.125em;
+    line-height: 1;
+  }
+  /* line 44, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+  p.catchphrase {
+    font-size: 1.325em;
+    line-height: 1.25;
+  }
+  /* line 47, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+  h2 {
+    font-size: 1.625em;
+    line-height: 1.5;
+  }
+  /* line 50, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+  h3 {
+    font-size: 1.335em;
+    line-height: 1.5;
+  }
+  /* line 53, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+  h4 {
+    font-size: 1.23em;
+    line-height: 1.5;
   }
 }
 
 @media (min-width: 60.0625em) {
-  /* line 53, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
-  header {
-    background-color: white;
-    background-image: url("../images/armsOut_1300px.jpg");
-    height: 400px;
-  }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
-  .hover-tile-outer.tile_1 {
-    background-image: url("../images/1tile400px.jpg");
-    background-position: center;
-  }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
-  .hover-tile-outer.tile_2 {
-    background-image: url("../images/2tile400px.jpg");
-    background-position: center;
-  }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
-  .hover-tile-outer.tile_3 {
-    background-image: url("../images/3tile400px.jpg");
-    background-position: center;
-  }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
-  .hover-tile-outer.tile_4 {
-    background-image: url("../images/4tile400px.jpg");
-    background-position: center;
-  }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
-  .hover-tile-outer.tile_5 {
-    background-image: url("../images/5tile400px.jpg");
-    background-position: center;
-  }
-  /* line 65, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_mixins.scss */
-  .hover-tile-outer.tile_6 {
-    background-image: url("../images/6tile400px.jpg");
-    background-position: center;
-  }
-  /* line 29, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+  /* line 60, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
   h1 {
-    font-size: 3em;
-    line-height: 1.05;
-    /* 3x body copy size = 48px */
-    /* keep to a multiple of the 20px line height and something more appropriate for display headings */
+    font-size: 2.625em;
+    line-height: 1;
   }
-}
-
-/* line 36, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
-h2, h1 {
-  font-size: 1.625em;
-  line-height: 1.15385;
-  /* 1.625x body copy size = 26px */
-  /* 30px / 26px */
-}
-
-@media (min-width: 43.75em) {
-  /* line 43, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
-  h2, h1 {
-    font-size: 2em;
-    line-height: 1.25;
-    /* 2x body copy size = 32px */
-  }
-}
-
-@media (min-width: 56.25em) {
-  /* line 50, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
-  h2, h1 {
-    font-size: 2.25em;
-    line-height: 1.25;
-    /* 2.25x body copy size = 36px */
-  }
-}
-
-/* line 56, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
-h3 {
-  font-size: 1.375em;
-  line-height: 113636364;
-  /* 1.375x body copy size = 22px */
-  /* 25px / 22px */
-}
-
-@media (min-width: 43.75em) {
   /* line 63, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
-  h3 {
-    font-size: 1.5em;
-    line-height: 1.25;
-    /* 1.5x body copy size = 24px */
+  p.catchphrase {
+    font-size: 1.813em;
+    line-height: 1;
   }
-}
-
-@media (min-width: 56.25em) {
-  /* line 70, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+  /* line 66, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+  h2 {
+    font-size: 2em;
+    line-height: 1.125;
+  }
+  /* line 69, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
   h3 {
     font-size: 1.75em;
-    line-height: 1.25;
-    /* 1.75x body copy size = 28px */
+    line-height: 1.125;
   }
-}
-
-/* line 76, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
-h4 {
-  font-size: 1.125em;
-  line-height: 1.11111;
-  /* 1.125x body copy size = 18px */
-}
-
-@media (min-width: 43.75em) {
-  /* line 82, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
+  /* line 72, /Applications/MAMP/htdocs/DGMDE27_assignment2/sass/filemanagement/_typescale.scss */
   h4 {
-    font-size: 1.125em;
-    line-height: 1.22222;
-    /* (22px / 18px */
+    font-size: 1.5em;
+    line-height: 1.125;
   }
 }
 
