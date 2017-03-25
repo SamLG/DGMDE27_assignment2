@@ -37,7 +37,7 @@ header {
 	position: relative;
 }
 .title {
-	margin-left: 1em;
+	margin-left: $common-margin;
 }
 h1,h2,h3,h4,h5,h6 {
 	font-family: 'Exo', "Arial Black", sans-serif;
@@ -48,21 +48,21 @@ main {
 			top: 3em;
 		}
 	}
-	p {
-		&:first-of-type {
-			margin: {
-				bottom: 7em;
-			}
-		}
-		&:last-of-type {
-			margin: {
-				bottom: 7em;
-			}
-		}
+}
+.firstp {
+	margin: {
+		bottom: $common-margin-lg;
 	}
 }
+.lastp { //I actually didn't have a lot of code that worked well with extend, but found a spot that had repetition. I kept coming across sections that I wanted to extend but couldn't because you can't extend nested selectors or inside media queries
+	@extend .firstp;
+}
+
 /* Safari 4.0 - 8.0 & Standard syntax */
-@-webkit-keyframes example, @keyframes example {
+@-webkit-keyframes example {
+	@include triangleChunk;
+}
+@keyframes example {
 	@include triangleChunk;
 }
 
@@ -85,8 +85,8 @@ main {
 
 .tiles {
 	margin: {
-		bottom: 7em;
-		top: 7em;
+		bottom: $common-margin-lg;
+		top: $common-margin-lg;
 	}
 }
 nav {
@@ -105,7 +105,7 @@ nav {
 			text-decoration: none;
 			font-weight: bold;
 			float: left;
-			padding: 1em;
+			padding: $common-margin;
 			margin: {
 				right: 2em;
 			}
@@ -139,12 +139,12 @@ a.return {
 	@include border-bottom-radius(5px);
 	position: fixed;
 	background-color: hsla(0%,0%,100%, 1);
-	bottom: .5em;
-	padding: .5em;
+	bottom: $common-margin-sm;
+	padding: $common-margin-sm;
 	font-size: 15px;
 	color: black;
 	text-decoration: none;
-	right: .5em;
+	right: $common-margin-sm;
 	&:hover {
 		background: {
 			color: special-color($primary-color, $secondary-color, "light",20%);
@@ -154,7 +154,7 @@ a.return {
 }
 // section {
 // 	background-color:white;
-// 	margin: 1em;
+// 	margin: $common-margin;
 // }
 //bourbon refill bullets
 .bullets {
@@ -166,7 +166,7 @@ a.return {
 
   display: flex;
   flex-wrap: wrap;
-  margin: 1em;
+  margin: $common-margin;
   margin-bottom: $base-line-height;
   overflow: auto;
   padding: 0;
@@ -175,7 +175,7 @@ a.return {
     flex-basis: 20em;
     flex-grow: 1;
     background-color: white;
-    margin-bottom:1em;
+    margin-bottom:$common-margin;
   }
 
   .bullet-icon {
@@ -277,7 +277,7 @@ a.return {
     }
 
     h4 {
-      margin: 0 0 0.5em 0;
+      margin: 0 0 $common-margin-sm 0;
     }
   }
 }//end bourbon refill component hover tile
@@ -324,8 +324,8 @@ a.return {
   width: 100%;
 
   .footer-logo {
-    margin-bottom: 1em;
-    margin-right: 1em;
+    margin-bottom: $common-margin;
+    margin-right: $common-margin;
 
     @include media($large-screen) {
       float: left;
@@ -339,20 +339,20 @@ a.return {
 
   ul {
     line-height: 1.5em;
-    margin: 0 0 1em 0;
+    margin: 0 0 $common-margin 0;
     padding: 0;
 
     @include media($large-screen) {
       float: left;
       line-height: 1.8em;
       margin-bottom: 0;
-      margin-left: 1em;
+      margin-left: $common-margin;
     }
   }
 
   ul li {
     list-style: none;
-    padding-right: 1em;
+    padding-right: $common-margin;
 
     @include media($large-screen) {
       display: inline;
@@ -380,7 +380,7 @@ a.return {
     }
 
     ul.footer-social {
-      margin: 1em 0 0 0;
+      margin: $common-margin 0 0 0;
 
       @include media($large-screen) {
         float: right;
@@ -389,7 +389,7 @@ a.return {
 
       li {
         float: left;
-        font-size: 1em;
+        font-size: $common-margin;
         line-height: 0;
         margin: 0;
         padding-right: 0.7em;
@@ -432,17 +432,6 @@ a.return {
 /* Responsive Menu Styling   adapted from http://www.w3schools.com/howto/howto_js_topnav.asp            */
 /********************************************************************************************************/
 
-  /* Remove margins and padding from the list, and add a black background color */
-// ul.topnav {
-    // list-style-type: none;
-    // margin: 0;
-    // padding: 0;
-//     overflow: hidden;
-// }
-
-/* Float the list items side by side */
-// ul.topnav li {float: left;}
-
 /* Style the links inside the list items */
 ul.topnav li a {
     display: inline-block;
@@ -451,9 +440,6 @@ ul.topnav li a {
 /*    font-size: 17px;
 */}
 
-/* Change background color of links on hover */
-/*ul.topnav li a:hover {background-color: #555;}
-*/
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
 ul.topnav li.icon {
 	display: none;
@@ -461,10 +447,6 @@ ul.topnav li.icon {
 
  /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
 @media screen and (max-width:680px) {
-	// nav {
-	// 	position: relative;
-	// 	bottom: auto;
-	// }
   ul.topnav li:not(:first-child) {
   	display: none;
   }
@@ -487,7 +469,7 @@ ul.topnav li.icon {
   ul.topnav.responsive li a {
     display: block;
     text-align: left;
-    padding: .5em;
+    padding: $common-margin-sm;
     margin: {
     	right: .2em;
     }
@@ -515,7 +497,7 @@ ul.topnav li.icon {
 	/*give it a height of one pixel for explorer, if we had a 
 	  box with nothing in it ie behaves badly*/
 	min-height: 1px;
-	padding: .5em;
+	padding: $common-margin-sm;
 	// background-color: white;
 	width: 100%;
 }
