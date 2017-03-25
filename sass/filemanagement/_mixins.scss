@@ -13,11 +13,12 @@
 // 	// }
 // }
 
+// custom mixin for setting type size and height to limit code repetition
 @mixin typescale($size, $height) {
 	font-size: $size;
 	line-height: $height;
 }
-//mixin from class
+//mixin from class also additional custom if elses
 @mixin mq($breakpoint: $medium){
   @if $breakpoint == $large {
     @media (min-width: $large) {
@@ -71,7 +72,7 @@
 // custom function with if else to allow for quick access of light, contrast, and regular altered versions of colors
 //each color is neutralized and made harmonious, before any continued styling
 @function special-color($mix, $base, $setting, $amount:56%) {
-	@if $setting == "light" {
+	@if $setting == "light" { //if else statments
 		@return lighten(mix-neutral(harmonious-mix($mix, $base)),$amount);
 	}
 	@elseif $setting == "contrast" {
@@ -83,7 +84,7 @@
 }
 // lighter colors for subtle gradient
 @function gradient-colors($mix, $base) {
-	@return desaturate(lighten(harmonious-mix($mix, $base),40%),30%);
+	@return desaturate(lighten(harmonious-mix($mix, $base),40%),30%);//built in sass function desaturate
 }
 
 //custom mixin for gradient
@@ -96,6 +97,7 @@
 	background: linear-gradient(to bottom right, $color1, $color2); /* Standard syntax */
 }
 
+//custom mixin for triangle animation with Bourbon Add on
 @mixin triangleChunk{
 	0%   {@include triangle(60px, $primary-color, down);}
     25%  {@include triangle(58px, desaturate($primary-color, 50%), down);}

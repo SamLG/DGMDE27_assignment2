@@ -54,7 +54,7 @@ main {
 		bottom: $common-margin-lg;
 	}
 }
-.lastp { //I actually didn't have a lot of code that worked well with extend, but found a spot that had repetition. I kept coming across sections that I wanted to extend but couldn't because you can't extend nested selectors or inside media queries
+.lastp { //extend usage I actually didn't have a lot of code that worked well with extend, but found a spot that had repetition. I kept coming across sections that I wanted to extend but couldn't because you can't extend nested selectors or inside media queries
 	@extend .firstp;
 }
 
@@ -308,6 +308,7 @@ a.return {
 //     height: 4em;
 //   }
 // }
+// Bourbon Refill Pattern footer 2
 .footer-2 {
   $base-spacing: 1.5em !default;
   $action-color: $primary-color !default;
@@ -473,7 +474,6 @@ ul.topnav li.icon {
     margin: {
     	right: .2em;
     }
-    // @include border-top-radius(0px);
   }
 }
 

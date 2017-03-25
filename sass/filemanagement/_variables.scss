@@ -4,8 +4,7 @@
 // is cool color and low key value
 $primary-color: saturate(hsl(206%, 23%, 35%),70%);
 //functions http://bourbon.io/docs/#tint-shade, I have my second color based on my first
-$secondary-color: complement($primary-color);
-// tint(hsla(hue(#0000ff), saturation(#0000ff), lightness(#0000ff), 1),80%);
+$secondary-color: tint(complement($primary-color),5%);
 
 /******************************
 /* color pallette            */
